@@ -1,0 +1,730 @@
+/*демо для сравненияЖ http://themeforest.net/item/kappe-creative-full-screen-html5-template/6659463*/
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import "fonts/font-awesome.css";
+.navDropdown {
+  display: none;
+  margin: 0;
+}
+.navDropdown .logoContainer {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+}
+.navDropdown .navDropList {
+  display: none;
+  margin: 0;
+}
+.navDropdown .navDropdownButton {
+  padding: 18px 0px;
+  background: linear-gradient(to bottom, #333B3F 0%, #2E363A 100%);
+  text-align: center;
+  font-size: 33px;
+  display: block;
+  padding: 10px 0px 10px 0px;
+  color: #fff;
+}
+.navDropdown .navDropdownButton:hover {
+  padding: 10px 0px 0px 0px;
+}
+.navDropdown .navDropdownButton + ul,
+.navDropdown .navDropdownButton:hover + ul {
+  margin-top: 10px;
+}
+.navDropdown .navDropdownButton:hover .navDropList,
+.navDropdown .navDropdownButton:active .navDropList {
+  display: block;
+}
+.navDropdown .navDropItems,
+.navDropdown .drop {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  padding: 18px 0px;
+  background: linear-gradient(to bottom, #333B3F 0%, #2E363A 100%);
+  text-align: center;
+}
+.navDropdown .navDropItems .dropNavLinks,
+.navDropdown .drop .dropNavLinks,
+.navDropdown .navDropItems .drop,
+.navDropdown .drop .drop,
+.navDropdown .navDropItems .dropLink,
+.navDropdown .drop .dropLink,
+.navDropdown .navDropItems .subLinks,
+.navDropdown .drop .subLinks {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+}
+.navDropdown .drop {
+  padding: 18px 0px 0px 0px;
+}
+.navDropdown .dropLink + ul,
+.navDropdown .dropLink:hover + ul {
+  margin-top: 18px;
+}
+.navDropdown .subDrop {
+  display: none;
+}
+.navDropdown .navDropItems:hover,
+.navDropdown .dropNavLinks:hover,
+.navDropdown .drop:hover,
+.navDropdown .dropLink:hover {
+  background: #25b1af;
+  color: #ff8533;
+  text-decoration: none;
+}
+.navDropdown .navDropItems:active,
+.navDropdown .dropNavLinks:active,
+.navDropdown .drop:active,
+.navDropdown .dropLink:active {
+  background: #25b1af;
+  color: #ff8533;
+  text-decoration: none;
+}
+.navDropdown .drop:hover .subDrop {
+  display: block;
+  padding: 18px 0px;
+}
+.navDropdown .subDrop:hover,
+.navDropdown .subDrop:active,
+.navDropdown .subLinks:hover,
+.navDropdown .subLinks:active {
+  color: #fff;
+  padding: 18px 0px;
+  background: linear-gradient(to bottom, #333B3F 0%, #2E363A 100%);
+  text-decoration: none;
+  color: #ff8533;
+}
+.navMask {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #242b2e;
+  z-index: 1;
+  -webkit-box-shadow: 15px 0px 16px -7px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 15px 0px 16px -7px rgba(0, 0, 0, 0.44);
+  box-shadow: 15px 0px 16px -7px rgba(0, 0, 0, 0.44);
+}
+.nav {
+  position: relative;
+  width: 300px;
+  height: 100%;
+  float: left;
+  background-color: #242b2e;
+  z-index: 2;
+  text-align: right;
+}
+.navHead {
+  height: 123px;
+  background-color: #fff;
+  text-align: center;
+}
+.mainNav {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+  position: relative;
+}
+.mainNav .mainItems.drop,
+.mainNav .mainNavLinks.drop {
+  position: relative;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  width: 300px;
+  top: 0;
+  left: 300px;
+  z-index: 3;
+}
+.dropItems {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+}
+.mainItems.drop:hover .dropdown {
+  display: block;
+  background: #25b1af;
+  color: #ff8533;
+  text-decoration: none;
+}
+.mainNavLinks,
+.dropLinks {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  padding: 18px 24px;
+  background: linear-gradient(to bottom, #333B3F 0%, #2E363A 100%);
+}
+.mainNavLinks:hover,
+.dropItems:hover,
+.dropLinks:hover {
+  background: #25b1af;
+  color: #ff8533;
+  text-decoration: none;
+}
+.mainNavLinks:active {
+  background: #25b1af;
+  color: #ff8533;
+  text-decoration: none;
+}
+.subNav {
+  border-bottom: 1px solid #242222;
+  padding: 23px 24px 22px;
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+}
+.subNav h3 {
+  color: #25b1af;
+  font-size: 19px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 0 0 10px;
+  line-height: 30px;
+}
+.subNav h3 .fa-th-large {
+  font-size: 19px;
+  color: #25b1af;
+  margin-left: 12px;
+}
+.subItems,
+.subNavLinks {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  font-size: 13px;
+  line-height: 24px;
+  text-shadow: 0 0 4px #22282b;
+  text-transform: capitalize;
+}
+.subItems :hover,
+.subNavLinks :hover {
+  color: #fff;
+}
+.subNavLinks {
+  padding-bottom: 8.5px;
+}
+.socIcons {
+  padding: 25px 24px 15px;
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+}
+.socIcons .socLink {
+  display: inline-block;
+  overflow: hidden;
+  height: 24px;
+  width: 24px;
+  border-radius: 2px;
+  padding: 0;
+  text-align: center;
+  margin: 0 0 6px 3px;
+}
+.socIcons .socLink:hover {
+  transform: scale(1.3);
+}
+.socIcons .socLink:hover i {
+  transform: scale(1.1);
+}
+.socIcons .fa {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: #fff;
+  text-align: center;
+}
+.skype,
+.fa .fa-skype {
+  background-color: #00aff0;
+}
+.google,
+.fa .fa-google-plus {
+  background-color: #da5f2e;
+}
+.twitter,
+.fa .fa-twitter {
+  background-color: #2eb0e3;
+}
+.pint,
+.fa .fa-pinterest {
+  background-color: #f43a2c;
+}
+.dribbble,
+.fa .fa-dribbble {
+  background-color: #ea4c89;
+}
+.behance,
+.fa .fa-behance {
+  background-color: #3e5ea2;
+}
+.fb,
+.fa .fa-facebook-f {
+  background-color: #3e5ea2;
+}
+.copyright {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  font-size: 12px;
+  padding: 0 24px 0 0;
+}
+@media screen and (max-width: 1275px) {
+  .navDropdown {
+    display: block;
+  }
+}
+.infoBox {
+  display: none;
+  position: fixed;
+  width: 285px;
+  top: 90px;
+  right: 0px;
+  z-index: 3;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  font-size: 16px;
+  line-height: 16px;
+  background: rgba(0, 0, 0, 0.7);
+}
+.infoBox ul {
+  padding: 18px 0 0px 19px;
+}
+.infoBox ul .infoIcons {
+  margin: 0 12px 18px 0;
+}
+.infoBox .infoItems a:hover {
+  text-decoration: underline;
+}
+.briefInfo {
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background: rgba(37, 176, 174, 0.7);
+}
+.briefInfo .fa-info-circle {
+  width: 61px;
+  height: 61px;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  margin: 13px;
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+  line-height: 61px;
+}
+.briefInfo:hover .infoBox,
+.briefInfo:active .infoBox {
+  display: block;
+}
+.infoItems,
+.infoLinks {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+.infoLinks {
+  display: inline-block;
+}
+.infoItemsHov .infoItems a:hover {
+  text-decoration: underline;
+}
+@font-face {
+  font-family: FontAwesome;
+  /* Имя шрифта */
+  src: url(../fonts/fontawesome-webfont.ttf);
+  /* Путь к файлу со шрифтом */
+  font-family: 'Helveticaneuecyr Light';
+  /* Имя шрифта */
+  src: url(../fonts/helveticaneuecyr-light.otf);
+  /* Путь к файлу со шрифтом */
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #b4b7b8;
+  z-index: 0;
+}
+.wrap {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: "Helvetica Neue", Helvetica, 'Helveticaneuecyr Light', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  text-align: left;
+  color: #818181;
+  overflow: hidden;
+  /*именно min-height, иначе при обычном свойстве height:100; контент перекроет футер*/
+}
+.clearFix {
+  clear: both;
+}
+hr {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #b4b7b8;
+}
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  font-weight: normal;
+  text-transform: capitalize;
+  color: #000;
+}
+.subNav {
+  display: none;
+}
+.content {
+  margin-left: 300px;
+  background-color: #b4b7b8;
+  position: relative;
+}
+.aboutWrap {
+  float: left;
+  overflow: hidden;
+  margin: 30px 28px;
+  background-color: #fff;
+}
+.leftPart,
+.rightPart {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  border-left: 1px solid #b4b7b8;
+  padding: 30px 30px;
+  float: left;
+  background: #fff;
+  width: 50%;
+  box-sizing: border-box;
+}
+.leftPart h2,
+.rightPart h2 {
+  margin-bottom: 17px;
+}
+.leftPart .intro {
+  width: 100%;
+}
+.leftPart .intro .mainCard {
+  position: relative;
+  overflow: hidden;
+}
+.leftPart .intro .mainCard .mainPic {
+  padding-bottom: 22px;
+  width: 100%;
+  overflow: hidden;
+}
+.leftPart .intro .mainCard .slider {
+  position: absolute;
+  top: 85%;
+  right: 3%;
+  width: 20%;
+  overflow: hidden;
+  z-index: 2;
+}
+.leftPart .intro .mainCard .slider .sliderIcon {
+  display: inline-block;
+  width: 19%;
+  height: 10px;
+  margin-right: 3%;
+  background: #fff;
+  box-sizing: border-box;
+}
+.leftPart .intro .mainCard .slider .sliderIcon:hover {
+  background: #25b1af;
+}
+.leftPart .intro p {
+  font-size: 18px;
+}
+.relProjectPics {
+  width: 100%;
+  overflow: hidden;
+}
+.relProjectPics .relProjectRow {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+.relProjectPics .relProjectRow .relProjectCard {
+  position: relative;
+  float: left;
+  width: 33.33333%;
+  box-sizing: border-box;
+}
+.relProjectPics .relProjectRow .relProject {
+  width: 100%;
+  box-sizing: border-box;
+}
+.commentBox {
+  width: 100%;
+  margin-top: 25px;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  color: #b4b7b8;
+  box-sizing: border-box;
+}
+.commentForm {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+.commentForm .infoFields {
+  display: block;
+  float: left;
+  width: 49.6%;
+  padding-right: 1.4%;
+  box-sizing: border-box;
+}
+.commentForm .input {
+  position: relative;
+}
+.commentForm .messageField {
+  display: block;
+  float: right;
+  width: 49.6%;
+  box-sizing: border-box;
+}
+.commentForm .messageField textarea {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  color: #b4b7b8;
+  font-size: 14px;
+  height: 126px;
+  width: 100%;
+  padding: 13px 18px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin-bottom: 4px;
+}
+.commentForm input {
+  display: inline-block;
+  width: 100%;
+  height: 58px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  font-size: 14px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 0 0 0 70px;
+}
+.commentForm .input:focus .fa,
+.commentForm .input:active .fa,
+.commentForm .input:hover .fa {
+  color: #fff;
+  background: #25b1af;
+}
+.commentForm span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  border-right: 1px solid #eeeeee;
+  width: 57px;
+  height: 57px;
+  box-sizing: border-box;
+}
+.commentForm span .fa {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+}
+.commentForm span i.fa {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  border: 1px solid #25b1af;
+  border-radius: 100%;
+  margin: 0px 13px 13px 0;
+  color: #25b1af;
+  font-size: 12px;
+  text-align: center;
+  line-height: 32px;
+  box-sizing: border-box;
+  margin: 13px 0 0 0;
+}
+.commentForm .submtBtn {
+  width: 100%;
+  background: #25b1af;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  padding-left: 0;
+}
+.rightPart .projectInfo {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  width: 100%;
+  overflow: hidden;
+}
+.rightPart .projectInfo .infoLine {
+  width: 100%;
+  border-bottom: 1px solid #b4b7b8;
+  margin-bottom: 15px;
+}
+.rightPart .projectInfo .infoLine .infoIcon {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  border: 1px solid #25b1af;
+  border-radius: 100%;
+  margin: 0px 13px 13px 0;
+  color: #25b1af;
+  font-size: 12px;
+  text-align: center;
+  line-height: 32px;
+  box-sizing: border-box;
+}
+.rightPart .projectInfo .infoLine .iconText {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.rightPart .projectInfo .infoLine .iconText .iconLink {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+}
+.rightPart .projectInfo .infoLine .iconText:hover .iconLink {
+  color: #242b2e;
+}
+.rightPart .tagsWidget {
+  margin-bottom: 30px;
+}
+.rightPart .tagsWidget .tags {
+  font-size: 12px;
+  display: inline-block;
+  border: 1px solid #b4b7b8;
+  border-radius: 9px;
+  padding: 17px;
+  margin: 5px 5px 5px 0;
+}
+.rightPart .tagsWidget .tags .tagLinks {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+}
+.rightPart .tagsWidget .tags:hover {
+  border-color: #242b2e;
+}
+.rightPart .tagsWidget .tags:hover .tagLinks {
+  color: #242b2e;
+}
+.rightPart .projectGallery {
+  overflow: hidden;
+}
+.rightPart .projectGallery .projectRow {
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.rightPart .projectGallery .projectRow .projectCard {
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+  float: left;
+  width: 10.3%;
+  margin-right: 2.2%;
+  box-sizing: border-box;
+}
+.rightPart .projectGallery .projectRow .projectCard .project {
+  width: 100%;
+}
+.rightPart .projectGallery .projectRow:nth-last-child(1) {
+  margin-bottom: 30px;
+}
+.rightPart .archive {
+  line-height: 28px;
+}
+.rightPart .archive .monthYearList {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+}
+.rightPart .archive .monthYearList .monthYear {
+  text-transform: capitalize;
+}
+.rightPart .archive .monthYearList .monthYear .monthYearLink {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+}
+.rightPart .archive .monthYearList .monthYear:hover,
+.rightPart .archive .monthYearList .monthYearLink:hover {
+  color: #242b2e;
+}
+@media screen and (max-width: 1275px) {
+  .content {
+    margin-left: 0px;
+    width: 100%;
+  }
+  .content .leftPart,
+  .content .rightPart {
+    width: 100%;
+  }
+  .content .infoFields,
+  .content .messageField {
+    width: 100%;
+  }
+  .content .infoFields .fa,
+  .content .messageField .fa {
+    font-size: 25px;
+  }
+  .content .infoFields input,
+  .content .messageField input,
+  .content .infoFields textarea,
+  .content .messageField textarea {
+    font-size: 30px;
+  }
+  .navMask,
+  .nav {
+    display: none;
+  }
+}

@@ -1,0 +1,380 @@
+/*демо для сравненияЖ http://themeforest.net/item/kappe-creative-full-screen-html5-template/6659463*/
+
+@import (reference) "mixins.less";
+@import (reference) "variables.less";
+@import "navmenu.less";
+@import "fixedinfo.less";
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import (reference) "fonts/font-awesome.css"; 
+@font-face {
+    font-family: FontAwesome; /* Имя шрифта */
+    src: url(../fonts/fontawesome-webfont.ttf); /* Путь к файлу со шрифтом */
+    font-family: 'Helveticaneuecyr Light'; /* Имя шрифта */
+    src: url(../fonts/helveticaneuecyr-light.otf); /* Путь к файлу со шрифтом */
+   }
+
+* {
+	margin: 0;
+    padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height:100%;
+	background-color: @mnBgClr;
+	z-index: 0;
+}
+
+.wrap {
+	.wrapBasics;
+}
+
+.clearFix {
+	clear: both;
+}
+
+hr {
+	.hrBasics;
+}
+
+h1, h2, h3, h5, h6 {
+	.subFont;
+	.mnHdlines;
+}
+
+.subNav {
+	display: none;
+}
+
+
+
+.content {
+	.contentBasics;
+	// width: 1621px;
+}
+
+
+.aboutWrap {
+	float: left;
+	overflow: hidden;
+	margin: 30px 28px;
+	background-color: @highlight;
+}
+
+
+.leftPart, .rightPart {
+	.subFont;
+	border-left: 1px solid @mnBgClr;
+	padding: 30px 30px;
+	float: left;
+	background: @highlight;
+	width: 50%;
+	box-sizing: border-box;
+	h2 {
+		margin-bottom: 17px;
+	}
+}
+
+.leftPart {
+	.intro {
+		width: 100%;
+		.mainCard {
+			position: relative;
+			overflow: hidden;
+			.mainPic {
+				padding-bottom: 22px;
+				width: 100%;
+				overflow: hidden;
+			}
+			.slider {
+				position: absolute;
+				top: 85%;
+				right: 3%;
+				width: 20%;
+				overflow: hidden;
+				z-index: 2;
+				.sliderIcon {
+					display: inline-block;
+					width: 19%;
+					height: 10px;
+					margin-right: 3%;
+					background: @highlight;
+					box-sizing: border-box; 
+				}
+				.sliderIcon:hover {
+					background: @hoverClr;
+				}
+			}
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+}
+
+.relProjectPics {
+	width: 100%;
+	// height: auto;
+	overflow: hidden;
+	.relProjectRow {
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 25px;
+		
+		.relProjectCard {
+			position: relative;
+			float: left;
+			width: 33.33333%;
+			box-sizing: border-box;
+			}	
+			.relProject {
+				width: 100%;
+				box-sizing: border-box;
+			}
+		}
+	}	
+
+.commentBox {
+	width: 100%;
+    margin-top: 25px;
+    // padding: 30px;
+    overflow: hidden;
+    .subFont;
+    color: @mnBgClr;
+    box-sizing: border-box;
+}
+   
+.commentForm {
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	.infoFields {
+		display: block;
+		float: left;
+		width: 49.6%;
+		padding-right: 1.4%;
+		box-sizing: border-box;
+	}
+	.input {
+		position: relative;
+	}
+	.messageField {
+		display: block;
+		float: right;
+		width: 49.6%;
+		box-sizing: border-box;
+			textarea {
+				.subFont;
+    			color: @mnBgClr;
+				font-size: 14px;
+				height: 126px;
+				width: 100%;
+				padding: 13px 18px;
+				border: 1px solid #eeeeee;
+				box-sizing: border-box;
+				margin-bottom: 4px;
+			}
+	}
+	
+	input {
+    	display: inline-block;
+    	width: 100%;
+    	height: 58px;
+    	.subFont;
+		font-size: 14px;
+		border: 1px solid #eeeeee;
+    	box-sizing: border-box;
+	    margin-bottom: 10px;
+	    padding: 0 0 0 70px;
+    }
+
+    .input:focus .fa, .input:active .fa, .input:hover .fa {
+    	color: @highlight;
+    	background: @hoverClr;
+    }
+
+	span {
+		position: absolute;
+		left: 0;
+		top: 0;
+		text-align: center;
+		border-right: 1px solid #eeeeee;
+    	width: 57px;
+    	height: 57px; 
+    	box-sizing: border-box;
+    	.fa {
+    		.infoGraphic;
+    	    }
+    	i.fa {
+    		.infoCircleSmall;
+    		margin: 13px 0 0 0;
+		}
+    }
+    .submtBtn {
+    	width: 100%;
+    	background: @hoverClr;
+    	border: none;
+    	text-transform: uppercase;
+    	text-align: center;
+    	color: @highlight;
+    	padding-left: 0;
+    }
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+			
+.rightPart {
+
+	.projectInfo {
+		.subFont;
+		width: 100%;
+		overflow: hidden;
+		.infoLine {
+			width: 100%;
+			border-bottom: 1px solid @mnBgClr;
+			margin-bottom: 15px;
+			.infoIcon {
+				.infoGraphic;
+				.infoCircleSmall
+			}
+			.iconText {
+				font-size: 14px;
+				text-transform: capitalize;   
+				.iconLink {
+					text-decoration: none;
+					.subFont;
+				}
+				&:hover .iconLink {
+					color: @black;
+				}
+			}
+		}	  
+	}
+	.tagsWidget {
+		margin-bottom: 30px;
+	.tags {	
+			font-size: 12px;
+			display: inline-block;
+			border: 1px solid @mnBgClr;
+			border-radius: 9px;
+			padding: 17px;
+			margin: 5px 5px 5px 0;
+			.tagLinks {
+				text-decoration: none;
+				.subFont;
+			}
+	}
+	.tags:hover {
+		border-color: @black;
+		& .tagLinks {
+			color: @black;
+		}
+	}
+	}
+	.projectGallery {
+		overflow: hidden;
+		.projectRow {
+			margin-bottom: 12px;
+			overflow: hidden;	
+			.projectCard {
+				font-size: 0;
+				line-height: 0;
+				position: relative;
+				float: left;
+				width: 10.3%;
+				margin-right: 2.2%;
+				box-sizing: border-box;
+				// &:nth-last-child(1) {
+				// 	margin-right: 0px;
+				// }
+				.project {
+					width: 100%;
+				}
+			}
+		}
+		.projectRow:nth-last-child(1) {
+			margin-bottom: 30px;
+		}	
+	}
+
+	.archive {
+		line-height: 28px;
+		.monthYearList {
+			.menuItems;
+			.monthYear {
+				text-transform: capitalize;
+				.monthYearLink {
+					.menuItems;
+					.subFont;
+				}
+			}	
+			.monthYear:hover, .monthYearLink:hover {
+				color: @black;
+			}	
+		}
+	}
+}
+
+
+
+// @media screen and (max-width: 1349px) {
+// 	.content {
+// 		max-width: 1920px;
+// 	}
+// 	.leftPart, .rightPart {
+// 		width: 100%;
+// 	}
+// 	.projectCard {
+// 		float: none;
+// 		width: 100%;
+// 	}
+// 	.commentBox {
+// 			.infoFields, .messageField {
+// 				width: 100%;
+// 			}
+// 	}
+// }
+
+// @media screen and (min-width: 1349px) {
+// 	.content {
+// 		max-width: 4560px;
+// 	}
+// }	
+
+
+@media screen and (max-width: 1275px) {
+	
+	.content {
+		margin-left: 0px;
+		width: 100%;
+
+		.leftPart, .rightPart {
+		width: 100%;
+		}
+
+		.infoFields, .messageField {
+			width: 100%;
+			.fa {
+				font-size: 25px;
+			}
+			input, textarea {
+				font-size: 30px;
+			}
+		}
+	}
+
+	.navMask, .nav {
+		display: none;
+	}
+}

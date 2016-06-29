@@ -1,0 +1,400 @@
+@import (reference) "variables.less";
+
+
+.wrapBasics () {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+	.mainFont;
+	overflow: hidden;
+/*именно min-height, иначе при обычном свойстве height:100; контент перекроет футер*/
+}
+
+.clearFix {
+	clear: both;
+}
+
+.mainFont () {
+	font-family: "Helvetica Neue", Helvetica, 'Helveticaneuecyr Light', Arial, sans-serif;
+	font-size: 14px;
+    line-height: 1.428571429;
+    text-align: left;
+    color: @fontClr;
+}
+
+.subFont () {
+	font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    // line-height: 30px;
+    color: @fontClr;
+}
+
+h1, h2, h3, h5, h6 {
+	.mnHdlines;
+}
+
+.mnHdlines {
+	font-weight: normal;
+	text-transform: capitalize;
+	color: #000;
+}
+
+.mnShadow() {
+	-webkit-box-shadow: 15px 0px 16px -7px rgba(0,0,0,0.44);
+	-moz-box-shadow: 15px 0px 16px -7px rgba(0,0,0,0.44);
+	box-shadow: 15px 0px 16px -7px rgba(0,0,0,0.44);
+}
+
+.subShadow() {
+	-webkit-box-shadow: 15px 0px 16px -7px rgba(0,0,0,0.22);
+	-moz-box-shadow: 15px 0px 16px -7px rgba(0,0,0,0.22);
+	box-shadow: 15px 0px 16px -7px rgba(0,0,0,0.22);
+}
+
+.hrBasics {
+	    margin-top: 15px;
+	    margin-bottom: 20px;
+	    border: 0;
+	    border-top: 1px solid @mnBgClr;
+}
+
+
+.navDropDownMixin {
+
+	display: none;
+	margin: 0;
+
+	.logoContainer {
+		width: 100%;
+		background-color: @highlight;
+		text-align: center;
+	}	
+
+	
+	.navDropList {
+		display: none;
+		margin: 0;
+	}
+
+	.navDropdownButton {
+		.gradNavLinksVert;
+		text-align: center;
+		font-size: 33px;
+		display: block;
+		padding: 10px 0px 10px 0px; //rewrite padding properties instead of those ones which are inherited from .gradNavLinks;
+		color: @highlight;
+
+	} 
+
+	.navDropdownButton:hover {
+		padding: 10px 0px 0px 0px;
+	}
+
+	.navDropdownButton+ul, .navDropdownButton:hover+ul{
+		margin-top: 10px;
+	}
+
+ 	.navDropdownButton:hover .navDropList, .navDropdownButton:active .navDropList {
+		display: block;
+
+	}
+
+	.navDropItems, .drop {
+		.menuItems;
+		.gradNavLinksVert;
+		text-align: center;
+		.dropNavLinks, .drop, .dropLink, .subLinks {
+			.mainNavBasics;
+	    }
+	}
+
+	.drop {
+		padding: 18px 0px 0px 0px;
+	}
+
+
+	.dropLink+ul, .dropLink:hover+ul{
+		margin-top: 18px;
+	}
+		
+	.subDrop {
+		display: none;
+	}
+
+	.navDropItems, .dropNavLinks, .drop, .dropLink {
+		&:hover {
+	    	.mainNavHov;
+	    }
+
+	    &:active {
+	    	.mainNavAct;
+	    }
+	}
+
+	.drop:hover .subDrop {
+		display: block;
+		padding: 18px 0px;
+	}
+
+	.subDrop:hover, .subDrop:active, .subLinks:hover, .subLinks:active {
+		.gradNavLinksVert;
+		text-decoration: none;
+		color: @linkHoverClr;
+	}
+}
+
+
+
+.leftMask () {
+	position: absolute;
+	width: 300px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: @navBgClr;
+	z-index: 1;
+	.mnShadow;
+    
+}
+
+.navBasics () {
+	position: relative;
+    width: 300px;
+    height: 100%;
+    float: left;
+    // overflow: hidden;
+    background-color: @navBgClr;
+    z-index: 2;
+    text-align: right;
+	// .subShadow; //пока есть маска с тенью эту можно деактивировать, чтобы не было наложения тени на тень;
+   
+}
+
+.navHeadBasics () {
+	height: 123px;
+    background-color: @highlight;
+    text-align: center;
+}
+
+.mainNavBasics {
+    	color: @highlight;
+    	text-transform: uppercase;
+    	font-family: 'Roboto',sans-serif;
+    	font-size: 18px;
+    	font-weight: 300;
+    	line-height: 20px;
+}
+
+.menuItems {
+	display: list-item;
+	list-style: none;
+	text-decoration: none;
+	}
+
+.gradNavLinks {
+    color: @highlight;
+    padding: 18px 24px;
+    background: linear-gradient(to bottom, #333B3F 0%, #2E363A 100%);   
+}
+
+.gradNavLinksVert {
+    color: @highlight;
+    padding: 18px 0px;
+    background: linear-gradient(to bottom, #333B3F 0%, #2E363A 100%);   
+}
+
+ .mainNavHov {
+	background: @hoverClr;
+	color: @linkHoverClr;
+	text-decoration: none;
+}
+   
+.mainNavAct {
+	background: @hoverClr;
+	color: @linkHoverClr;
+	text-decoration: none;
+}
+
+.socLinkBasics {
+	display: inline-block;
+	overflow: hidden;
+	height: 24px;
+	width: 24px;
+	border-radius: 2px;
+	padding: 0;
+	text-align: center;
+	margin: 0 0 6px 3px;
+	// box-sizing: border-box;
+	    //   	& a {
+       		
+    		
+    	// }	
+}
+
+.socIconFont {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: @highlight;
+    text-align: center;
+	}
+
+.infoGraphic {
+	font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+}	
+
+.skypeIcon {
+	background-color: #00aff0;
+}
+
+.dribbbleIcon {
+	background-color: #ea4c89;
+}	
+
+.googlePlusIcon {
+	background-color: #da5f2e;
+}
+
+.pinterestIcon {
+	background-color: #f43a2c;
+}
+
+.twitterIcon {
+	background-color: #2eb0e3;
+}
+
+.behanceIcon {
+	background-color: #3e5ea2;
+}
+
+.fbIcon {
+	background-color: #3e5ea2;
+}
+	
+
+
+// .cardsBg() when (@evSpanEvCard) {
+// 	background-color: @@evenClr;
+// }
+
+// .cardsBg() when (@evSpanOddCard) {
+// 	background-color: @@oddClr;
+// }
+
+// .cardsBg() when (@oddSpanEvCard) {
+// 	background-color: @@oddClr;
+// }
+
+// .cardsBg() when (@oddSpanEvCard) {
+// 	background-color: @@evenClr;
+// }
+// .cardsBg();
+
+.copyrightBox() {
+	.subFont;  
+}
+
+
+.contentBasics () {
+	// width: 1621px;
+	// height: auto;
+	// width: calc(100%-300px);
+	margin-left: 300px;
+	background-color: @mnBgClr;
+	position: relative;
+}
+
+.briefInfoBasics {
+	width: 90px;
+	height: 90px;
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	right: 0;
+	background: rgba(37,176,174,0.7);
+}
+
+.infoCircleBasics {
+	width: 61px;
+    height: 61px;
+    display: inline-block;
+    border: 1px solid @highlight;
+    border-radius: 100%;
+    margin: 13px;
+    color: @highlight;
+    font-size: 28px;
+    text-align: center;
+    line-height: 61px;
+}
+
+.infoCircleSmall {
+	width: 32px;
+    height: 32px;
+	display: inline-block;
+	border: 1px solid @hoverClr;
+	border-radius: 100%;
+	margin: 0px 13px 13px 0;
+	color: @hoverClr;
+	font-size: 12px;
+	text-align: center;
+	line-height: 32px;
+	box-sizing: border-box;
+}
+
+.tileCards () {
+	// width: 405px;
+	// height: 311px;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+
+.cardMaskBasics () {
+	// width: 405px;
+	// height: 311px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	background: rgba(37,176,174,0.7);
+	top: 0;
+	left: 0;
+	.subFont;
+	color: @highlight;
+	text-align: center;
+	text-transform: capitalize;
+	}
+
+.maskIconBasics () {
+		.infoCircleBasics;
+	}
+
+//for Blog
+.gridBasics () {
+	// -webkit-column-count: 5;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	// -moz-column-count: 5;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	// column-count: 5;
+	column-gap: 10px;
+	column-fill: auto;
+	-webkit-column-width: @postWidth; /* Chrome, Safari, Opera */
+    -moz-column-width: @postWidth; /* Firefox */
+    column-width: @postWidth;
+}
+
+.commentIconsBasics () {
+	display: inline-block;
+	color: @mnBgClr;
+	font-size: 14px;
+    // margin: 10px 5px 9px 15px;
+}
+

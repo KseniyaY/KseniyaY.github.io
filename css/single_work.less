@@ -1,0 +1,252 @@
+/*демо для сравненияЖ http://themeforest.net/item/kappe-creative-full-screen-html5-template/6659463*/
+
+@import (reference) "mixins.less";
+@import (reference) "variables.less";
+@import "navmenu.less";
+@import "fixedinfo.less";
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import (reference) "fonts/font-awesome.css"; 
+@font-face {
+    font-family: FontAwesome; /* Имя шрифта */
+    src: url(../fonts/fontawesome-webfont.ttf); /* Путь к файлу со шрифтом */
+    font-family: 'Helveticaneuecyr Light'; /* Имя шрифта */
+    src: url(../fonts/helveticaneuecyr-light.otf); /* Путь к файлу со шрифтом */
+   }
+
+* {
+	margin: 0;
+    padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height:100%;
+	background-color: @mnBgClr;
+	z-index: 0;
+}
+
+.wrap {
+	.wrapBasics;
+}
+
+.clearFix {
+	clear: both;
+}
+
+hr {
+	.hrBasics;
+}
+
+h1, h2, h3, h5, h6 {
+	.subFont;
+	.mnHdlines;
+}
+
+.subNav {
+	display: none;
+}
+
+
+
+.content {
+	.contentBasics;
+	// width: 1621px;
+}
+
+
+.aboutWrap {
+	float: left;
+	overflow: hidden;
+	margin: 30px 28px;
+	background-color: @highlight;
+}
+
+
+.leftPart, .rightPart {
+	.subFont;
+	border-left: 1px solid @mnBgClr;
+	padding: 30px 30px;
+	float: left;
+	background: @highlight;
+	width: 50%;
+	box-sizing: border-box;
+	h2 {
+		margin-bottom: 17px;
+	}
+}
+
+.leftPart {
+	.intro {
+		width: 100%;
+		.mainCard {
+			position: relative;
+			overflow: hidden;
+			.mainPic {
+				padding-bottom: 22px;
+				width: 100%;
+				overflow: hidden;
+			}
+			.slider {
+				position: absolute;
+				top: 85%;
+				right: 3%;
+				width: 20%;
+				overflow: hidden;
+				z-index: 2;
+				.sliderIcon {
+					display: inline-block;
+					width: 19%;
+					height: 10px;
+					margin-right: 3%;
+					background: @highlight;
+					box-sizing: border-box; 
+				}
+				.sliderIcon:hover {
+					background: @hoverClr;
+				}
+			}
+		}	
+		p {
+			font-size: 18px;
+		}
+	}
+}
+
+.relProjectPics {
+	width: 100%;
+	// height: auto;
+	overflow: hidden;
+	.relProjectRow {
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		margin-bottom: 25px;
+		
+		.relProjectCard {
+			position: relative;
+			float: left;
+			width: 33.33333%;
+			box-sizing: border-box;
+			}	
+			.relProject {
+				width: 100%;
+				box-sizing: border-box;
+			}
+		}
+	}	
+			
+.rightPart {
+
+	.projectInfo {
+		.subFont;
+		width: 100%;
+		overflow: hidden;
+		.infoLine {
+			width: 100%;
+			border-bottom: 1px solid @mnBgClr;
+			margin-bottom: 15px;
+			.infoIcon {
+				.infoGraphic;
+				.infoCircleSmall
+			}
+			.iconText {
+				font-size: 14px;
+				text-transform: capitalize;   
+				.iconLink {
+					text-decoration: none;
+					.subFont;
+				}
+				&:hover .iconLink {
+					color: @black;
+				}
+			}
+		}	  
+	}
+	.tagsWidget {
+		margin-bottom: 30px;
+	.tags {	
+			font-size: 12px;
+			display: inline-block;
+			border: 1px solid @mnBgClr;
+			border-radius: 9px;
+			padding: 17px;
+			margin: 5px 5px 5px 0;
+			.tagLinks {
+				text-decoration: none;
+				.subFont;
+			}
+	}
+	.tags:hover {
+		border-color: @black;
+		& .tagLinks {
+			color: @black;
+		}
+	}
+	}
+
+	
+	.projectGallery {
+		overflow: hidden;
+		.projectRow {
+			margin-bottom: 12px;
+			overflow: hidden;	
+			.projectCard {
+				font-size: 0;
+				line-height: 0;
+				position: relative;
+				float: left;
+				width: 10.3%;
+				margin-right: 2.2%;
+				box-sizing: border-box;
+				// &:nth-last-child(1) {
+				// 	margin-right: 0px;
+				// }
+				.project {
+					width: 100%;
+				}
+			}
+		}
+		.projectRow:nth-last-child(1) {
+			margin-bottom: 30px;
+		}	
+	}
+	
+
+	.projectFeatures {
+		line-height: 28px;
+		.featuresList {
+			list-style-type: circle;
+			list-style-position: inside;
+			list-style-image: url("../img/tick.png");
+			.feature {
+				text-transform: capitalize;
+				.featureLink {
+					.menuItems;
+					.subFont;
+				}
+			}	
+			.feature:hover, .featureLink:hover {
+				color: @black;
+			}	
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 1275px) {
+	.content {
+		margin-left: 0px;
+		width: 100%;
+
+		.leftPart, .rightPart {
+			width: 100%;
+			.tags {
+				font-size: 26px;
+			}
+		}
+	}
+	.navMask, .nav {
+		display: none;
+	}
+}

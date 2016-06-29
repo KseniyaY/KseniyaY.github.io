@@ -1,0 +1,209 @@
+/*демо для сравненияЖ http://themeforest.net/item/kappe-creative-full-screen-html5-template/6659463*/
+
+@import (reference) "mixins.less";
+@import (reference) "variables.less";
+@import "navmenu.less";
+@import "fixedinfo.less";
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import (reference) "fonts/font-awesome.css"; 
+@font-face {
+    font-family: FontAwesome; /* Имя шрифта */
+    src: url(../fonts/fontawesome-webfont.ttf); /* Путь к файлу со шрифтом */
+    font-family: 'Helveticaneuecyr Light'; /* Имя шрифта */
+    src: url(../fonts/helveticaneuecyr-light.otf); /* Путь к файлу со шрифтом */
+   }
+
+* {
+	margin: 0;
+    padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height:100%;
+	background-color: @mnBgClr;
+	z-index: 0;
+}
+
+.wrap {
+	.wrapBasics;
+}
+
+.clearFix {
+	clear: both;
+}
+
+
+.subNav {
+	display: none;
+}
+
+
+.content {
+	.contentBasics;
+}
+
+.map {
+	z-index: -1;
+}
+
+.contactBox {
+	position: relative;
+    z-index: 1;
+    margin: 75px 0 30px 125px;
+    padding: 30px;
+    background: rgba(256,256,256,0.9);
+    width: 780px;
+    max-width: 100%;
+    overflow: hidden;
+    float: left;
+    .subFont;
+    color: @mnBgClr;
+	font-size: 18px;
+	box-sizing: border-box;
+	h1 {
+		.mnHdlines;
+		display: inline-block;
+		font-size: 22px;
+		padding-bottom: 10px;
+    }
+    .toggle {
+		display: inline-block;
+		float: right;
+	}
+	hr {
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	    border: 0;
+	    border-top: 1px solid #eeeeee;
+	}
+}
+   
+.contactForm {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	.infoFields {
+		display: block;
+		float: left;
+		width: 50%;
+		padding-right: 10px;
+		box-sizing: border-box;
+	}
+	.input {
+		position: relative;
+	}
+	.messageField {
+		display: block;
+		float: right;
+		width: 50%;
+		box-sizing: border-box;
+			textarea {
+				.subFont;
+    			color: @mnBgClr;
+				font-size: 14px;
+				height: 126px;
+				width: 100%;
+				padding: 13px 18px;
+				border: 1px solid #eeeeee;
+				box-sizing: border-box;
+				margin-bottom: 4px;
+			}
+	}
+	
+	input {
+    	display: inline-block;
+    	width: 100%;
+    	height: 58px;
+    	.subFont;
+		font-size: 14px;
+		border: 1px solid #eeeeee;
+    	box-sizing: border-box;
+	    margin-bottom: 10px;
+	    padding: 0 0 0 70px;
+    }
+
+	 .input:focus .fa, .input:active .fa, .input:hover .fa {
+    	color: @highlight;
+    	background: @hoverClr;
+    }
+
+	span {
+		position: absolute;
+		left: 0;
+		top: 0;
+		text-align: center;
+		border-right: 1px solid #eeeeee;
+    	width: 57px;
+    	height: 57px; 
+    	box-sizing: border-box;
+    	.fa {
+    		.infoGraphic;
+    	    }
+    	i.fa {
+    		.infoCircleSmall;
+    		margin: 13px 0 0 0;
+		}
+    }
+    .submtBtn {
+    	width: 100%;
+    	background: @hoverClr;
+    	border: none;
+    	text-transform: uppercase;
+    	text-align: center;
+    	color: @highlight;
+    	padding-left: 0;
+    }
+}	
+
+.map {
+	position: absolute;
+	z-index: 1;
+	width: 1140px;
+    height: 900px;
+    top: 0;
+    left: 0;
+    // iframe {
+    // width: 100%;
+    // height: 100%;	
+    // }
+    &:hover .contactBox {
+		opacity: 0.3;
+    }
+}
+
+
+
+@media screen and (max-width: 1275px) {
+	.content {
+		margin-left: 0px;
+		width: 100%;
+
+		.map {
+			width: 100%;
+			height: 1575px;
+		}
+
+		.contactBox {
+			margin: 75px 0 30px 100px;
+
+			.infoFields, .messageField {
+				width: 100%;
+				.fa {
+					font-size: 25px;
+				}
+				input, textarea {
+					font-size: 30px;
+				}
+			}
+		}
+	}	
+
+	.navMask, .nav {
+		display: none;
+	}
+}
+

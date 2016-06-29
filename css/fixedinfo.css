@@ -1,0 +1,61 @@
+.infoBox {
+  display: none;
+  position: fixed;
+  width: 285px;
+  top: 90px;
+  right: 0px;
+  z-index: 3;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  font-size: 16px;
+  line-height: 16px;
+  background: rgba(0, 0, 0, 0.7);
+}
+.infoBox ul {
+  padding: 18px 0 0px 19px;
+}
+.infoBox ul .infoIcons {
+  margin: 0 12px 18px 0;
+}
+.infoBox .infoItems a:hover {
+  text-decoration: underline;
+}
+.briefInfo {
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background: rgba(37, 176, 174, 0.7);
+}
+.briefInfo .fa-info-circle {
+  width: 61px;
+  height: 61px;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  margin: 13px;
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+  line-height: 61px;
+}
+.briefInfo:hover .infoBox,
+.briefInfo:active .infoBox {
+  display: block;
+}
+.infoItems,
+.infoLinks {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+.infoLinks {
+  display: inline-block;
+}
+.infoItemsHov .infoItems a:hover {
+  text-decoration: underline;
+}

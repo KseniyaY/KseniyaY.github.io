@@ -1,0 +1,296 @@
+/*демо для сравненияЖ http://themeforest.net/item/kappe-creative-full-screen-html5-template/6659463*/
+
+@import (reference) "mixins.less";
+@import (reference) "variables.less";
+@import "navmenu.less";
+@import "fixedinfo.less";
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import (reference) "fonts/font-awesome.css"; 
+@font-face {
+    font-family: FontAwesome; /* Имя шрифта */
+    src: url(../fonts/fontawesome-webfont.ttf); /* Путь к файлу со шрифтом */
+    font-family: 'Helveticaneuecyr Light'; /* Имя шрифта */
+    src: url(../fonts/helveticaneuecyr-light.otf); /* Путь к файлу со шрифтом */
+   }
+
+* {
+	margin: 0;
+    padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height:100%;
+	background-color: @mnBgClr;
+	z-index: 0;
+}
+
+.wrap {
+	.wrapBasics;
+}
+
+.clearFix {
+	clear: both;
+}
+
+hr {
+	.hrBasics;
+}
+
+h1, h2, h3, h5, h6 {
+	.subFont;
+	.mnHdlines;
+}
+
+.subNav {
+	display: none;
+}
+
+
+
+.content {
+	.contentBasics;
+	// width: 1621px;
+}
+
+
+.aboutWrap {
+	float: left;
+	overflow: hidden;
+	margin: 30px 28px;
+	background-color: @highlight;
+}
+
+
+.leftPart, .rightPart {
+	.subFont;
+	border-left: 1px solid @mnBgClr;
+	padding: 30px 30px;
+	float: left;
+	background: @highlight;
+	width: 50%;
+	box-sizing: border-box;
+	h2 {
+		margin-bottom: 17px;
+	}
+}
+
+.leftPart {
+	.intro {
+		width: 100%;
+		.mainPic {
+			padding-bottom: 22px;
+			width: 100%;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+}
+
+.staffPics {
+	width: 100%;
+	// height: auto;
+	overflow: hidden;
+	.staffRow {
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 25px;
+		
+		.staffCard {
+			font-size: 0;
+			line-height: 0;
+			position: relative;
+			float: left;
+			width: 30%;
+			margin-right: 5%;
+			box-sizing: border-box;
+			&:nth-last-child(1) {
+				margin-right: 0px;
+			}
+			&:hover .cardMask, &:hover .maskText {
+				display: block;
+			}	
+			.staff {
+				width: 100%;
+			}
+		}
+	}	
+}	
+				
+.cardMask {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	.cardMaskBasics;
+	width: 100%;
+	height: 100%;
+}
+
+.maskText {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: @highlight;
+	padding: 25px 15px 15px 15px;
+	overflow: hidden;
+	box-sizing: border-box;
+	.employee {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 15px;
+		line-height: 16px;
+		color: @highlight;
+		padding-bottom: 5px;
+		.employeeLink {
+			text-decoration: none;
+			color: @highlight;
+		}
+	} 
+	.jobPosition {
+		text-transform: capitalize;
+		font-size: 13px;
+		line-height: 16px;
+		// padding: 0 15px 15px 15px;
+	}
+}
+
+
+.rightPart {
+
+	.skillWidget {
+		.subFont;
+		color: @black;
+		width: 100%;
+		overflow: hidden;
+	& p {
+		font-size: 13px;
+		clear: both;
+		margin-bottom: 10px;
+		& span {
+		font-size: 14px;
+		float: right;
+		}
+	}	
+	& progress {
+		margin-left: 1px;
+		width: 100%;
+		height: 33px;
+		margin-bottom: 30px;
+		box-sizing: border-box;
+		&::-webkit-progress-bar {
+ 		background-color: #ffffff;
+ 		}
+ 		&::-webkit-progress-value {
+ 		background-color: #e2e2e2;
+ 		}
+	}
+}	
+
+	.testimonialWidget {
+		overflow: hidden;
+	}
+	.client {
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		font-size: 0;
+		box-sizing: border-box;
+	}
+	.clientIcon {
+		float: left;
+		// margin-right: 24px;
+		max-width: 80px;
+		overflow: hidden;
+	}
+	.clientInfo {
+		.subFont;
+		font-style: italic;
+		font-size: 15px;
+		line-height: 26px;
+	    padding: 27px 25px;
+	    margin: 0;
+	  	// margin-left: 80px;
+		background: @hoverClr;
+		overflow: hidden;
+		// box-sizing: border-box;
+		h3 {
+			color: @highlight;
+		}
+}
+
+	.testimonial {
+		border: 1px solid @mnBgClr;
+		font-size: 14px;
+		line-height: 30px;
+		padding: 16px 30px;
+		margin-bottom: 27px;
+	}
+
+	.serviceList {
+		line-height: 28px;
+		list-style-position: inside;
+		.serviceLink {
+			.menuItems;
+			.subFont;
+			&:hover, .serviceItem:hover {
+				color: @black;
+			}
+		}
+	}
+}
+
+
+
+// @media screen and (max-width: 1349px) {
+// 	.content {
+// 		max-width: 1920px;
+// 	}
+// 	.leftPart, .rightPart {
+// 		width: 100%;
+// 	}
+// 	.staffRow, .staffRow .staffCard {
+// 		float: none;
+// 		min-width: 100%;
+// 		margin-bottom: 15px;
+// 		padding: 0;
+// 	}
+// 	.clientInfo {
+// 		width: 100%;
+// 	}
+// }
+
+// @media screen and (min-width: 1349px) {
+// 	.content {
+// 		max-width: 4560px;	
+// 	}
+// }	
+
+
+@media screen and (max-width: 1275px) {
+	.content {
+		margin-left: 0px;
+		width: 100%;
+
+		.leftPart, .rightPart {
+			width: 100%;
+			.skillWidget {
+				// p {
+				// 	font-size: 16px;
+				// }
+				.progressRate {
+					font-size: 22px;
+				}
+			}
+		}
+	}
+	.navMask, .nav {
+		display: none;
+	}
+}

@@ -1,0 +1,161 @@
+@import (reference) "mixins.less";
+@import (reference) "variables.less";
+
+
+.navDropdown {
+	.navDropDownMixin();
+};
+
+
+.navMask {
+	.leftMask;
+}
+
+.nav {
+    .navBasics;
+}
+
+.navHead {
+    .navHeadBasics;
+}
+
+.mainNav {
+    .mainNavBasics;
+    position: relative;
+
+    .mainItems.drop, .mainNavLinks.drop {
+		position: relative;
+	}
+}	
+
+.dropdown {
+		display: none;
+		position: absolute;
+		width: 300px;
+		top: 0;
+		left: 300px;
+		z-index: 3;
+}
+
+.dropItems {
+	.menuItems;
+}
+
+.mainItems.drop:hover .dropdown {
+	display: block;
+   .mainNavHov;
+}
+
+.mainNavLinks {
+	.menuItems;
+    .gradNavLinks;
+      	&:hover {
+    		.mainNavHov;
+    	}
+
+    	&:active {
+    		.mainNavAct;
+    	} 
+}      
+
+.dropLinks:extend(.mainNavLinks) {}
+
+.dropItems:hover:extend(.mainNavLinks:hover), .dropLinks:hover:extend(.mainNavLinks:hover) {}
+
+
+.subNav {
+	border-bottom: 1px solid #242222;
+	padding: 23px 24px 22px;
+	.menuItems;
+	h3 {
+		color: @hoverClr;
+	    font-size: 19px;
+	    font-family: 'Roboto', sans-serif;
+	    font-weight: 300;
+	    margin: 0 0 10px;
+	    line-height: 30px;
+	    .fa-th-large {
+	    	font-size: 19px;
+	    	color: @hoverClr;
+	    	margin-left: 12px;
+	    }
+	}
+}
+
+
+.subItems, .subNavLinks {
+	.menuItems;
+	.subFont();
+	font-size: 13px;
+    line-height: 24px;
+    text-shadow: 0 0 4px #22282b;
+    text-transform: capitalize;
+    & :hover {
+    	color: @highlight;
+    }
+}
+
+.subNavLinks {
+	padding-bottom: 8.5px;
+}
+
+
+.socIcons {
+	// border-bottom: 1px solid #242222;
+	padding: 25px 24px 15px;
+	.menuItems;
+	.socLink {
+		.socLinkBasics;
+		&:hover {
+			transform: scale(1.3);
+		}
+		&:hover i {
+			transform: scale(1.1);
+			// padding-top: 5px;
+		}
+	}	
+	.fa {
+	.socIconFont;
+}
+}
+
+
+.skype, .fa .fa-skype {
+	.skypeIcon;
+}
+
+.google, .fa .fa-google-plus {
+	.googlePlusIcon;
+}
+
+.twitter, .fa .fa-twitter {
+	.twitterIcon;
+}
+
+.pint, .fa .fa-pinterest {
+	.pinterestIcon;
+}
+
+.dribbble, .fa .fa-dribbble {
+	.dribbbleIcon;
+}
+
+.behance, .fa .fa-behance {
+	.behanceIcon;
+}
+
+.fb, .fa .fa-facebook-f {
+	.fbIcon;
+}
+
+.copyright {
+	.copyrightBox;
+	font-size: 12px;
+	padding: 0 24px 0 0;
+}
+
+@media screen and (max-width: 1275px) {
+	.navDropdown {
+    	display: block;
+    }
+}

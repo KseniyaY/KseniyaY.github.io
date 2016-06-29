@@ -1,0 +1,51 @@
+@import (reference) "mixins.less";
+@import (reference) "variables.less";
+
+
+
+
+
+.infoBox {
+	display:none;
+	position: fixed;
+	width: 285px;
+	top: 90px;
+	right: 0px;
+	z-index: 3;
+	.subFont;
+	font-size: 16px;
+	line-height: 16px;
+	background: rgba(0,0,0,0.7);
+		& ul {
+			padding: 18px 0 0px 19px;
+			& .infoIcons {
+				margin: 0 12px 18px 0;
+			}
+		}
+		.infoItemsHov;		
+}
+
+.briefInfo {
+	.briefInfoBasics;
+	.fa-info-circle {
+		.infoCircleBasics;
+		}
+	&:hover .infoBox, &:active .infoBox {
+		display: block;
+	}
+}
+
+.infoItems, .infoLinks {
+	.menuItems;
+	color: @highlight;
+}
+
+.infoLinks {
+	display: inline-block;
+}
+
+.infoItemsHov {
+	.infoItems a:hover {
+		text-decoration: underline;
+	}
+}

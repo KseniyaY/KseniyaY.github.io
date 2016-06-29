@@ -1,0 +1,622 @@
+/*демо для сравненияЖ http://themeforest.net/item/kappe-creative-full-screen-html5-template/6659463*/
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import "fonts/font-awesome.css";
+.navDropdown {
+  display: none;
+  margin: 0;
+}
+.navDropdown .logoContainer {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+}
+.navDropdown .navDropList {
+  display: none;
+  margin: 0;
+}
+.navDropdown .navDropdownButton {
+  padding: 18px 0px;
+  background: linear-gradient(to bottom, #333B3F 0%, #2E363A 100%);
+  text-align: center;
+  font-size: 33px;
+  display: block;
+  padding: 10px 0px 10px 0px;
+  color: #fff;
+}
+.navDropdown .navDropdownButton:hover {
+  padding: 10px 0px 0px 0px;
+}
+.navDropdown .navDropdownButton + ul,
+.navDropdown .navDropdownButton:hover + ul {
+  margin-top: 10px;
+}
+.navDropdown .navDropdownButton:hover .navDropList,
+.navDropdown .navDropdownButton:active .navDropList {
+  display: block;
+}
+.navDropdown .navDropItems,
+.navDropdown .drop {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  padding: 18px 0px;
+  background: linear-gradient(to bottom, #333B3F 0%, #2E363A 100%);
+  text-align: center;
+}
+.navDropdown .navDropItems .dropNavLinks,
+.navDropdown .drop .dropNavLinks,
+.navDropdown .navDropItems .drop,
+.navDropdown .drop .drop,
+.navDropdown .navDropItems .dropLink,
+.navDropdown .drop .dropLink,
+.navDropdown .navDropItems .subLinks,
+.navDropdown .drop .subLinks {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+}
+.navDropdown .drop {
+  padding: 18px 0px 0px 0px;
+}
+.navDropdown .dropLink + ul,
+.navDropdown .dropLink:hover + ul {
+  margin-top: 18px;
+}
+.navDropdown .subDrop {
+  display: none;
+}
+.navDropdown .navDropItems:hover,
+.navDropdown .dropNavLinks:hover,
+.navDropdown .drop:hover,
+.navDropdown .dropLink:hover {
+  background: #25b1af;
+  color: #ff8533;
+  text-decoration: none;
+}
+.navDropdown .navDropItems:active,
+.navDropdown .dropNavLinks:active,
+.navDropdown .drop:active,
+.navDropdown .dropLink:active {
+  background: #25b1af;
+  color: #ff8533;
+  text-decoration: none;
+}
+.navDropdown .drop:hover .subDrop {
+  display: block;
+  padding: 18px 0px;
+}
+.navDropdown .subDrop:hover,
+.navDropdown .subDrop:active,
+.navDropdown .subLinks:hover,
+.navDropdown .subLinks:active {
+  color: #fff;
+  padding: 18px 0px;
+  background: linear-gradient(to bottom, #333B3F 0%, #2E363A 100%);
+  text-decoration: none;
+  color: #ff8533;
+}
+.navMask {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #242b2e;
+  z-index: 1;
+  -webkit-box-shadow: 15px 0px 16px -7px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 15px 0px 16px -7px rgba(0, 0, 0, 0.44);
+  box-shadow: 15px 0px 16px -7px rgba(0, 0, 0, 0.44);
+}
+.nav {
+  position: relative;
+  width: 300px;
+  height: 100%;
+  float: left;
+  background-color: #242b2e;
+  z-index: 2;
+  text-align: right;
+}
+.navHead {
+  height: 123px;
+  background-color: #fff;
+  text-align: center;
+}
+.mainNav {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+  position: relative;
+}
+.mainNav .mainItems.drop,
+.mainNav .mainNavLinks.drop {
+  position: relative;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  width: 300px;
+  top: 0;
+  left: 300px;
+  z-index: 3;
+}
+.dropItems {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+}
+.mainItems.drop:hover .dropdown {
+  display: block;
+  background: #25b1af;
+  color: #ff8533;
+  text-decoration: none;
+}
+.mainNavLinks,
+.dropLinks {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  padding: 18px 24px;
+  background: linear-gradient(to bottom, #333B3F 0%, #2E363A 100%);
+}
+.mainNavLinks:hover,
+.dropItems:hover,
+.dropLinks:hover {
+  background: #25b1af;
+  color: #ff8533;
+  text-decoration: none;
+}
+.mainNavLinks:active {
+  background: #25b1af;
+  color: #ff8533;
+  text-decoration: none;
+}
+.subNav {
+  border-bottom: 1px solid #242222;
+  padding: 23px 24px 22px;
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+}
+.subNav h3 {
+  color: #25b1af;
+  font-size: 19px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 0 0 10px;
+  line-height: 30px;
+}
+.subNav h3 .fa-th-large {
+  font-size: 19px;
+  color: #25b1af;
+  margin-left: 12px;
+}
+.subItems,
+.subNavLinks {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  font-size: 13px;
+  line-height: 24px;
+  text-shadow: 0 0 4px #22282b;
+  text-transform: capitalize;
+}
+.subItems :hover,
+.subNavLinks :hover {
+  color: #fff;
+}
+.subNavLinks {
+  padding-bottom: 8.5px;
+}
+.socIcons {
+  padding: 25px 24px 15px;
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+}
+.socIcons .socLink {
+  display: inline-block;
+  overflow: hidden;
+  height: 24px;
+  width: 24px;
+  border-radius: 2px;
+  padding: 0;
+  text-align: center;
+  margin: 0 0 6px 3px;
+}
+.socIcons .socLink:hover {
+  transform: scale(1.3);
+}
+.socIcons .socLink:hover i {
+  transform: scale(1.1);
+}
+.socIcons .fa {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: #fff;
+  text-align: center;
+}
+.skype,
+.fa .fa-skype {
+  background-color: #00aff0;
+}
+.google,
+.fa .fa-google-plus {
+  background-color: #da5f2e;
+}
+.twitter,
+.fa .fa-twitter {
+  background-color: #2eb0e3;
+}
+.pint,
+.fa .fa-pinterest {
+  background-color: #f43a2c;
+}
+.dribbble,
+.fa .fa-dribbble {
+  background-color: #ea4c89;
+}
+.behance,
+.fa .fa-behance {
+  background-color: #3e5ea2;
+}
+.fb,
+.fa .fa-facebook-f {
+  background-color: #3e5ea2;
+}
+.copyright {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  font-size: 12px;
+  padding: 0 24px 0 0;
+}
+@media screen and (max-width: 1275px) {
+  .navDropdown {
+    display: block;
+  }
+}
+.infoBox {
+  display: none;
+  position: fixed;
+  width: 285px;
+  top: 90px;
+  right: 0px;
+  z-index: 3;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  font-size: 16px;
+  line-height: 16px;
+  background: rgba(0, 0, 0, 0.7);
+}
+.infoBox ul {
+  padding: 18px 0 0px 19px;
+}
+.infoBox ul .infoIcons {
+  margin: 0 12px 18px 0;
+}
+.infoBox .infoItems a:hover {
+  text-decoration: underline;
+}
+.briefInfo {
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background: rgba(37, 176, 174, 0.7);
+}
+.briefInfo .fa-info-circle {
+  width: 61px;
+  height: 61px;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  margin: 13px;
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+  line-height: 61px;
+}
+.briefInfo:hover .infoBox,
+.briefInfo:active .infoBox {
+  display: block;
+}
+.infoItems,
+.infoLinks {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+.infoLinks {
+  display: inline-block;
+}
+.infoItemsHov .infoItems a:hover {
+  text-decoration: underline;
+}
+@font-face {
+  font-family: FontAwesome;
+  /* Имя шрифта */
+  src: url(../fonts/fontawesome-webfont.ttf);
+  /* Путь к файлу со шрифтом */
+  font-family: 'Helveticaneuecyr Light';
+  /* Имя шрифта */
+  src: url(../fonts/helveticaneuecyr-light.otf);
+  /* Путь к файлу со шрифтом */
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #b4b7b8;
+  z-index: 0;
+}
+.wrap {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: "Helvetica Neue", Helvetica, 'Helveticaneuecyr Light', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  text-align: left;
+  color: #818181;
+  overflow: hidden;
+  /*именно min-height, иначе при обычном свойстве height:100; контент перекроет футер*/
+}
+.clearFix {
+  clear: both;
+}
+hr {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #b4b7b8;
+}
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  font-weight: normal;
+  text-transform: capitalize;
+  color: #000;
+}
+.subNav {
+  display: none;
+}
+.content {
+  margin-left: 300px;
+  background-color: #b4b7b8;
+  position: relative;
+}
+.aboutWrap {
+  float: left;
+  overflow: hidden;
+  margin: 30px 28px;
+  background-color: #fff;
+}
+.leftPart,
+.rightPart {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  border-left: 1px solid #b4b7b8;
+  padding: 30px 30px;
+  float: left;
+  background: #fff;
+  width: 50%;
+  box-sizing: border-box;
+}
+.leftPart h2,
+.rightPart h2 {
+  margin-bottom: 17px;
+}
+.leftPart .intro {
+  width: 100%;
+}
+.leftPart .intro .mainPic {
+  padding-bottom: 22px;
+  width: 100%;
+}
+.leftPart .intro p {
+  font-size: 18px;
+}
+.staffPics {
+  width: 100%;
+  overflow: hidden;
+}
+.staffPics .staffRow {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+.staffPics .staffRow .staffCard {
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+  box-sizing: border-box;
+}
+.staffPics .staffRow .staffCard:nth-last-child(1) {
+  margin-right: 0px;
+}
+.staffPics .staffRow .staffCard:hover .cardMask,
+.staffPics .staffRow .staffCard:hover .maskText {
+  display: block;
+}
+.staffPics .staffRow .staffCard .staff {
+  width: 100%;
+}
+.cardMask {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  background: rgba(37, 176, 174, 0.7);
+  top: 0;
+  left: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  width: 100%;
+  height: 100%;
+}
+.maskText {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 25px 15px 15px 15px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.maskText .employee {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 16px;
+  color: #fff;
+  padding-bottom: 5px;
+}
+.maskText .employee .employeeLink {
+  text-decoration: none;
+  color: #fff;
+}
+.maskText .jobPosition {
+  text-transform: capitalize;
+  font-size: 13px;
+  line-height: 16px;
+}
+.rightPart .skillWidget {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  color: #242b2e;
+  width: 100%;
+  overflow: hidden;
+}
+.rightPart .skillWidget p {
+  font-size: 13px;
+  clear: both;
+  margin-bottom: 10px;
+}
+.rightPart .skillWidget p span {
+  font-size: 14px;
+  float: right;
+}
+.rightPart .skillWidget progress {
+  margin-left: 1px;
+  width: 100%;
+  height: 33px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+.rightPart .skillWidget progress::-webkit-progress-bar {
+  background-color: #ffffff;
+}
+.rightPart .skillWidget progress::-webkit-progress-value {
+  background-color: #e2e2e2;
+}
+.rightPart .testimonialWidget {
+  overflow: hidden;
+}
+.rightPart .client {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  font-size: 0;
+  box-sizing: border-box;
+}
+.rightPart .clientIcon {
+  float: left;
+  max-width: 80px;
+  overflow: hidden;
+}
+.rightPart .clientInfo {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 26px;
+  padding: 27px 25px;
+  margin: 0;
+  background: #25b1af;
+  overflow: hidden;
+}
+.rightPart .clientInfo h3 {
+  color: #fff;
+}
+.rightPart .testimonial {
+  border: 1px solid #b4b7b8;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 16px 30px;
+  margin-bottom: 27px;
+}
+.rightPart .serviceList {
+  line-height: 28px;
+  list-style-position: inside;
+}
+.rightPart .serviceList .serviceLink {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #818181;
+}
+.rightPart .serviceList .serviceLink:hover,
+.rightPart .serviceList .serviceLink .serviceItem:hover {
+  color: #242b2e;
+}
+@media screen and (max-width: 1275px) {
+  .content {
+    margin-left: 0px;
+    width: 100%;
+  }
+  .content .leftPart,
+  .content .rightPart {
+    width: 100%;
+  }
+  .content .leftPart .skillWidget .progressRate,
+  .content .rightPart .skillWidget .progressRate {
+    font-size: 22px;
+  }
+  .navMask,
+  .nav {
+    display: none;
+  }
+}
